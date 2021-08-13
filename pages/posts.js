@@ -1,5 +1,14 @@
+import Head from 'next/head';
+
 export default function Posts() {
-	return <h1>Posts Page</h1>;
+	return (
+		<>
+			<Head>
+				<title>Posts Page Next</title>
+			</Head>
+			<h1>Posts Page</h1>
+		</>
+	);
 }
 
 // /posts
