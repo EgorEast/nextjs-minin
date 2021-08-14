@@ -12,7 +12,7 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
 	const [posts, setPosts] = useState(serverPosts);
 	useEffect(() => {
 		async function load() {
-			const responce = await fetch('http://localhost:4200/posts');
+			const responce = await fetch(`${process.env.API_URL}/posts`);
 			const data = await responce.json();
 			setPosts(data);
 		}
@@ -45,7 +45,7 @@ Posts.getInitialProps = async ({ req }: NextPageContext) => {
 	if (!req) {
 		return { posts: null };
 	}
-	const responce = await fetch('http://localhost:4200/posts');
+	const responce = await fetch(`${process.env.API_URL}/posts`);
 	const posts: MyPost[] = await responce.json();
 	return { posts };
 };

@@ -15,7 +15,7 @@ export default function Post({ post: serverPost }: PostPageProps) {
 	useEffect(() => {
 		async function load() {
 			const responce = await fetch(
-				`http://localhost:4200/posts/${router.query.id}`
+				`${process.env.API_URL}/posts/${router.query.id}`
 			);
 			const data = await responce.json();
 			setPost(data);

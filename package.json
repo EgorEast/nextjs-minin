@@ -10,6 +10,7 @@
     "mock": "json-server --watch db.json -p 4200 -d 1750"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "next": "11.1.0",
     "nextjs-progressbar": "^0.0.11",
     "react": "17.0.2",

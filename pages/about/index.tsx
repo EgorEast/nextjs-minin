@@ -17,7 +17,7 @@ export default function About({ title }: AboutPageProps) {
 }
 
 About.getInitialProps = async () => {
-	const responce = await fetch('http://localhost:4200/about');
+	const responce = await fetch(`${process.env.API_URL}/about`);
 	const data: MyAbout = await responce.json();
 
 	return {
