@@ -44,3 +44,9 @@ Post.getInitialProps = async ({ query, req }) => {
 	const post = await responce.json();
 	return { post };
 };
+
+// export async function getServerSideProps({ query }) {
+// 	const responce = await fetch(`http://localhost:4200/posts/${query.id}`);
+// 	const post = await responce.json();
+// 	return { props: { post } };
+// }
